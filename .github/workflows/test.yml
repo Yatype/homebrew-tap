@@ -1,0 +1,13 @@
+name: проверка
+on: [push, workflow_dispatch]
+jobs:
+  install:
+    runs-on: macos-latest
+    steps:
+      - name: установить из этого tap
+        run: |
+          brew tap yatype/tap "https://github.com/${GITHUB_REPOSITORY}"
+          brew install --cask yatype/tap/yatype
+          test -d /Applications/Yatype.app
+          xattr -p com.apple.quarantine /Applications/Yatype.app && exit 1 || echo "карантина нет"
+          brew uninstall --cask yatype
