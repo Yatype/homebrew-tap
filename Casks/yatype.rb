@@ -1,6 +1,6 @@
 cask "yatype" do
   version "0.1.1"
-  sha256 "5ff240aaef23472daca0185052fb86dc0c39a4cdc1bd0c9994ce0282683456d6"
+  sha256 "c4f30566c0872c7d51c5cb981b506e165e113cf477de7f20a5e2b8d6495698df"
 
   url "https://github.com/Yatype/yatype/releases/download/v#{version}/Yatype-#{version}.dmg"
   name "Yatype"
